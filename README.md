@@ -42,7 +42,7 @@ pdf2zh -i
 
 ## Access
 
-Open [http://127.0.0.1:7860](http://127.0.0.1:7860)
+Open [http://127.0.0.1:8080](http://127.0.0.1:8080)
 
 ## Limitation
 

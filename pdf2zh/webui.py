@@ -379,17 +379,17 @@ with gr.Blocks(
 
 def setup_gui(share=False):
     if flag_demo:
-        demo.launch(server_name="0.0.0.0", max_file_size="5mb", inbrowser=True)
+        demo.launch(server_name="0.0.0.0", server_port=8080, max_file_size="5mb", inbrowser=True)
     else:
         try:
-            demo.launch(server_name="0.0.0.0", debug=True, inbrowser=True, share=share)
+            demo.launch(server_name="0.0.0.0", server_port=8080, debug=True, inbrowser=True, share=share)
         except Exception:
             print(
                 "Error launching GUI using 0.0.0.0.\nThis may be caused by global mode of proxy software."
             )
             try:
                 demo.launch(
-                    server_name="127.0.0.1", debug=True, inbrowser=True, share=share
+                    server_name="127.0.0.1", server_port=8080, debug=True, inbrowser=True, share=share
                 )
             except Exception:
                 print(
