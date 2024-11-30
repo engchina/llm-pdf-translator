@@ -251,7 +251,8 @@ def main(args: Optional[List[str]] = None) -> int:
             print(f"  {file}", file=sys.stderr)
         return -1
     if parsed_args.interactive:
-        from pdf2zh.gui import setup_gui
+        # from pdf2zh.gui import setup_gui
+        from pdf2zh.webui import setup_gui
 
         setup_gui(parsed_args.share)
         return 0
